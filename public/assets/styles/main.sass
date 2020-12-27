@@ -66,6 +66,11 @@ p
 // Utils
 .container
     margin: 0 4%
+.flex-container
+    display: flex
+.emphasis
+    font-size: 1.5rem
+    font-family: $bold
 
 // layouts
 
@@ -115,8 +120,9 @@ p
 #nav
     display: flex
     justify-content: space-between
-    height: 76px
     align-items: center
+    height: 76px
+    
     ul
         display: flex
         width: 45%
@@ -130,4 +136,56 @@ p
                 transition: color 1s ease   
                 &:hover > a 
                     color: $primary
+
+#footer
+    background: $primary
+    color: white
+    h5
+        color: white
+    .row-one
+        height: 150px
+    div.left-upper
+        width: 50%
+        background: url("/assets/img/footer-logo.svg") left top / 7% no-repeat scroll
+
+    div.right-upper
+        width: 50%
+        a
+            text-decoration: underline
+    
+    .row-two
+        height: 300px
+    div.left-mid
+        width: 50%
+        h5
+            font-size: 1.1rem
+    div.right-mid
+        width: 40%
+        justify-content: space-between
+        h5
+            margin-bottom: 16px
+            font-size: 1.1rem
+
+    p.uline
+        border-bottom: 1px solid white
+        padding: 24px 0
+        margin-right: 20px
+    div.copy
+        background: #000000
+        opacity: 0.2
+        padding: 16px 0
+    div.copy-content > div
+        width: 33%
+        justify-content: space-between
+        &:nth-of-type(2)
+            text-align: center
+        &:nth-of-type(3)
+            text-align: right
+        small
+            font-size: 0.75rem
+            margin-top: 30px
+
+            
+            
+
 
