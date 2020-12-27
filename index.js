@@ -10,8 +10,9 @@ app.use(router)
 app.set('view engine', 'ejs');     // Tells express to use .ejs
 
 app.use((req, res) => {
-    res.status(404).render('/404')
+    res.status(404).render('404')
 })
+
 
 // Which port to listen on 
 app.listen(PORT, () =>(`http://localhost:${PORT}`))

@@ -1,0 +1,133 @@
+// fonts
+@font-face 
+    font-family: SctoGroteskA-Bold
+    src: url(../fonts/SctoGroteskA-Bold.woff2) format('woff2')
+
+@font-face 
+    font-family: SctoGroteskA-Medium
+    src: url(../fonts/SctoGroteskA-Medium.woff2) format('woff2')
+
+@font-face 
+    font-family: SctoGroteskA-Regular
+    src: url(../fonts/SctoGroteskA-Regular.woff2) format('woff2')
+
+
+// resets 
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+a
+    text-decoration: none
+    color: inherit
+    cursor: pointer
+    display: inline-block
+button
+    background-color: transparent
+    color: inherit
+    border-width: 0
+    cursor: pointer
+input
+    box-sizing: border-box
+input, textarea
+    outline: none
+ul, ol, dd
+    list-style: none
+
+// variables, palette and typography
+$primary: hsl(40, 4%, 14%)
+// $primary10: darken($primary, 10%)
+$accent: hsl(0, 79%, 89%)
+$neutral: hsl(0, 0%, 96%)
+
+// Typography Variables
+$bold: 'SctoGroteskA-Bold'
+$med: 'SctoGroteskA-Medium'
+$reg: 'SctoGroteskA-Regular'
+$baseLineHeight: 2.0
+
+
+// Global Typography Styles
+html
+    font-family: $reg
+h1, h2, h3, h4, h5, h6
+    font-weight: 700
+    color: $accent
+    font-family: $reg
+h1
+    margin-bottom: 30px
+    font-size: 2.5rem
+h2
+    font-size: 2rem
+    font-weight: 500
+p
+    font-weight: 400
+
+// Utils
+.container
+    margin: 0 4%
+
+// layouts
+
+
+
+// mixins
+
+// Button styles to apply to an anchor tag (e.g. a.btn)
+=sassBtn($bg, $col, $fs, $lh, $minWth)
+    background: $bg
+    color: $col
+    font-size: $fs
+    line-height: $lh    // use to set xy pad
+    min-width: $minWth
+    // base btn styles
+    padding: .375rem .75rem
+    display: inline-block
+    cursor: pointer
+    text-align: center
+    border-radius: 4px
+    font-weight: 700
+    user-select: none
+    vertical-align: middle
+    white-space: nowrap
+    transition: color .5s ease,
+    background-color .5s ease, 
+    border-color .5s ease
+    &:hover
+        background: darken($bg, 7)
+// To call use: @include sassBtn($bg, $col, $fs, $lh, $minWth)
+
+// Tame Input Field Default Styling
+=tameTextInput
+    width: 100%
+    padding: 12px 20px
+    margin: 8px 0
+    display: inline-block
+    border: 1px solid #ccc
+    border-radius: 4px
+    box-sizing: border-box
+    font-size: 1.2rem
+
+
+// CUSTOM STYLES
+
+// Navbar
+#nav
+    display: flex
+    justify-content: space-between
+    height: 76px
+    align-items: center
+    ul
+        display: flex
+        width: 45%
+        justify-content: space-between
+        li 
+            border-bottom: 3px solid transparent
+            transition: all 1s ease
+            &:hover
+                border-bottom: 3px solid $primary
+            a
+                transition: color 1s ease   
+                &:hover > a 
+                    color: $primary
+
