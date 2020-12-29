@@ -49,22 +49,17 @@ ul, ol, dd {
 
 html {
   font-family: "SctoGroteskA-Regular";
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  color: #f9cdcd;
-  font-family: "SctoGroteskA-Regular";
+  color: #252422;
 }
 
 h1 {
-  margin-bottom: 30px;
-  font-size: 2.5rem;
+  font-size: 6rem;
+  font-family: "SctoGroteskA-Bold";
 }
 
 h2 {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.5rem;
+  font-family: "SctoGroteskA-Bold";
 }
 
 p {
@@ -126,6 +121,219 @@ p {
 
 #nav ul li a:hover > a {
   color: #252422;
+}
+
+#home h1 {
+  color: #252422;
+}
+
+#home h1.heading-right {
+  text-align: right;
+}
+
+#home video {
+  margin-bottom: 20px;
+}
+
+#home section#basic-is {
+  border-top: 1px solid #252422;
+  border-bottom: 1px solid #252422;
+  padding: 10px 0;
+}
+
+#home section#basic-is div.flex-container {
+  height: 300px;
+}
+
+#home section#basic-is p {
+  width: 50%;
+  font-size: 2.5rem;
+  padding: 40px 0 0 0;
+}
+
+#home section#basic-is div {
+  background: url("/assets/img/branding-img.svg") right top/20% no-repeat scroll;
+}
+
+#home section#basic-is a.btn {
+  background: #ffffff;
+  color: #252422;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-width: 170px;
+  padding: .375rem .75rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #252422;
+  border-radius: 24px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  margin-bottom: 150px;
+}
+
+#home section#basic-is a.btn:hover {
+  background: #252422;
+  color: #ffffff;
+}
+
+#home section#featured {
+  padding: 150px 0 0 0;
+}
+
+#home section#featured h2 {
+  margin-bottom: 150px;
+}
+
+#home section#featured div.flex-container {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+}
+
+#home section#featured div.flex-container div.card {
+  scroll-snap-align: start;
+  min-width: 500px;
+  min-height: 305px;
+  padding-right: 12%;
+}
+
+#home section#featured div.flex-container div.card img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 12px;
+}
+
+#home section#featured div.flex-container div.card span {
+  display: block;
+  margin-bottom: 100px;
+  border-bottom: 2px solid #252422;
+  width: 40px;
+  height: 1px;
+}
+
+#home section#featured div.flex-container div.card p.company {
+  border-bottom: 1px solid #252422;
+  font-family: "SctoGroteskA-Bold";
+  padding-bottom: 12px;
+  margin-bottom: 10px;
+}
+
+#home section#featured div.flex-container div.card p.desc {
+  font-size: 1rem;
+  padding-bottom: 100px;
+}
+
+#home div.bg-primary {
+  background: #252422;
+  color: #f9cdcd !important;
+}
+
+#home div.bg-primary section#basic {
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+#home div.bg-primary section#basic h1 {
+  color: #f9cdcd;
+  line-height: 1.0;
+  margin-bottom: 30px;
+}
+
+#home div.bg-primary section#basic p {
+  margin-bottom: 80px;
+}
+
+#home div.bg-primary section#basic a.btn {
+  background: #252422;
+  color: #f9cdcd;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  min-width: 170px;
+  padding: .375rem .75rem;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #252422;
+  border-radius: 24px;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  border: 1px solid #f9cdcd;
+}
+
+#home div.bg-primary section#basic a.btn:hover {
+  background: #252422;
+  color: #ffffff;
+}
+
+#home div.bg-primary section#basic a.btn:hover {
+  background: #f9cdcd;
+  color: #000000;
+}
+
+#home div.bg-primary section#basic video {
+  width: 75%;
+  margin-left: 25%;
+}
+
+#home section#featured-news h2 {
+  padding-bottom: 40px;
+}
+
+#home section#featured-news div.wrap {
+  padding: 20px 0 40px 0;
+  border-top: 1px solid #f9cdcd;
+}
+
+#home section#featured-news div.wrap:last-child {
+  padding-bottom: 150px;
+}
+
+#home section#featured-news div.left {
+  width: 30%;
+}
+
+#home section#featured-news div.left img {
+  width: 100%;
+  height: auto;
+}
+
+#home section#featured-news div.center {
+  width: 40%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 20px;
+}
+
+#home section#featured-news div.center p > a {
+  font-size: 2.5rem;
+  font-family: "SctoGroteskA-Regular";
+}
+
+#home section#featured-news div.right {
+  width: 30%;
+  text-align: right;
+  background: url("/assets/img/arrow.svg") right top/15% no-repeat scroll;
 }
 
 #footer {
