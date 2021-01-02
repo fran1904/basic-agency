@@ -1,0 +1,172 @@
+// about page
+div#about-wrapper 
+    background: $primary
+    color: $accent
+    nav ul li:nth-child(2)
+        border-bottom: 3px solid $accent
+
+    main#about
+        section.first
+            border-bottom: 1px solid white
+            div
+                width: 50%
+            div.right
+                padding-top: 240px
+                h1
+                    margin-bottom: 55px
+                p
+                    font-size: 2rem
+                    margin-bottom: 65px
+        section#annoying-pics
+            height: 1400px
+            padding: 200px 0
+            div.left
+                width: 25%
+                display: flex
+                align-items: center
+
+            div.right
+                width: 75%      
+                position: relative
+                p
+                    font-size: 1.4rem
+                img
+                    width: 500px
+                .img-1
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: 4
+                .img1-num
+                    position: absolute
+                    top: 693px
+                    left: 0
+                .img-2
+                    position: absolute
+                    top: 300px
+                    left: 150px
+                    z-index: 5
+                .img2-num
+                    position: absolute
+                    top: 991px
+                    left: 151px
+                .img-3
+                    position: absolute
+                    top: 50px
+                    left: 300px
+                    z-index: 3
+                .img3-num
+                    position: absolute
+                    top: 65px
+                    left: 815px
+                .img-4
+                    position: absolute
+                    top: 400px
+                    left: 500px
+                    z-index: 2
+                .img4-num
+                    position: absolute
+                    top: 1088px
+                    left: 504px
+        
+        section.agency-snapshot
+            border-bottom: 1px solid white
+            h1
+                border-top: 1px solid $accent
+                border-bottom: 1px solid $accent
+                font-size: 12rem
+            div.first
+                padding: 26px 0
+                p
+                    width: 33%
+                p.txt-right
+                    text-align: right
+            div.wrap
+                div.left
+                    width: 33%
+                    margin-top: 100px
+                div.right
+                    width: 66%
+                    div.card
+                        width: 50%
+                        margin-top: 100px
+                        padding-right: 20%
+                        > *
+                            margin-bottom: 30px
+                        h3
+                            font-size: 2rem
+                        h2
+                            font-size: 4rem
+    // list section
+    section.list-section
+        padding-bottom: 100px
+        .second li
+            margin-bottom: 24px
+
+
+    // awards section
+
+    section#awards
+        > div
+            padding: 50px 0
+            height: 400px
+            margin-bottom: 70px
+            div.left
+                width: 33%
+            div.right
+                width: 66%
+                p
+                    font-size: 2.5rem
+                    padding-right: 48%
+                    margin-bottom: 50px
+                a.btn
+                    @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
+                    border: 1px solid $accent
+                    &:hover
+                        background: $accent
+                        color: $primary
+            
+    section#tabs
+        padding-bottom: 300px
+        div.left
+            width: 50%
+            a
+                position: relative
+                opacity: 0.6
+                transition: opacity .3s ease
+                &:hover
+                    opacity: 1.0
+                    
+                h1
+                    font-size: 5rem
+                    display: inline-block
+                span
+                    // display: inline-block
+                    font-size: 1.5rem
+                    position: absolute
+                    top: 15px
+                    padding-left: 20px
+        div.right
+            width: 50%
+            padding: 115px 0 0 7%
+            div.tabcontent
+                width: 70%
+                height: auto
+                display: none
+                img
+                    width: 100%
+                    height: auto
+
+    #footer
+        background: white
+        color: $primary
+        h5
+            color: $primary
+        p.uline
+            border-bottom: 1px solid $primary
+        ul.ftr-social
+            display: none
+    #footer > div.copy
+        background: lightgrey 
+        small
+            color: lighten($primary, 20%)

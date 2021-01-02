@@ -1,0 +1,15 @@
+@font-face {
+  font-family: SctoGroteskA-Bold;
+  src: url(../fonts/SctoGroteskA-Bold.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: SctoGroteskA-Medium;
+  src: url(../fonts/SctoGroteskA-Medium.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: SctoGroteskA-Regular;
+  src: url(../fonts/SctoGroteskA-Regular.woff2) format("woff2");
+}
+/*# sourceMappingURL=fonts.css.map */

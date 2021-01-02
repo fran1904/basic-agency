@@ -137,7 +137,6 @@ p {
   height: 100%;
 }
 
-/* Modal Content/Box */
 .modal-content {
   background-color: #252422;
   color: #f9cdcd;
@@ -861,6 +860,10 @@ div#about-wrapper #footer > div.copy small {
   color: #5a5853;
 }
 
+div#news-wrapper nav ul li:nth-child(3) {
+  border-bottom: 3px solid #252422;
+}
+
 main#newspage header {
   height: 400px;
   -webkit-box-pack: justify;
@@ -1032,147 +1035,6 @@ div#thinking-wrapper #footer > div.copy {
 
 div#thinking-wrapper #footer > div.copy small {
   color: #5a5853;
-}
-
-#contact header {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 100px 0 200px 0;
-  border-bottom: 1px solid #252422;
-}
-
-#contact header div.left {
-  width: 49%;
-}
-
-#contact header div.left img {
-  width: 100%;
-  height: auto;
-}
-
-#contact header div.right {
-  width: 49%;
-}
-
-#contact header div.right p {
-  margin-bottom: 100px;
-}
-
-#contact div.info > * {
-  width: 33%;
-}
-
-#contact div.info div.left p {
-  font-size: 46px !important;
-}
-
-#contact div.info div.mid > *, #contact div.info div.right > * {
-  margin-bottom: 24px;
-}
-
-#contact div.info div.mid h3, #contact div.info div.right h3 {
-  font-size: 1.2rem;
-  font-family: "SctoGroteskA-Bold";
-}
-
-#contact div.info div.mid a, #contact div.info div.right a {
-  text-decoration: underline;
-}
-
-#contact div.first {
-  padding: 26px 0;
-}
-
-#contact p.what-is-this {
-  width: 33%;
-}
-
-#contact p.txt-right {
-  text-align: right;
-}
-
-section#offices {
-  padding: 20px 0;
-  margin-bottom: 100px;
-}
-
-section#offices div.one-third {
-  width: 33%;
-  border-right: 1px solid #252422;
-  max-height: 2000px;
-}
-
-section#offices div.two-thirds {
-  width: 66%;
-}
-
-section#offices div.two-thirds div.card {
-  display: inline;
-  height: 632px;
-  width: 50%;
-  padding: 0 20px;
-}
-
-section#offices div.two-thirds div.card .pointless {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.3rem;
-}
-
-section#offices div.two-thirds div.card div.media {
-  margin-bottom: 24px;
-}
-
-section#offices div.two-thirds div.card div.media img {
-  width: 100%;
-  height: auto;
-}
-
-section#offices div.two-thirds div.card h3 {
-  font-size: 2rem;
-  font-family: "SctoGroteskA-Bold";
-  margin-bottom: 24px;
-}
-
-section#offices p.rule {
-  width: 100%;
-  margin: 20px;
-  border-bottom: 1px solid #252422;
-  margin-bottom: 20px;
-}
-
-#contact > div > section.pre-footer {
-  border-top: 1px solid #252422;
-  margin-bottom: 100px;
-}
-
-#contact > div > section.pre-footer div.soc > * {
-  width: 33%;
-}
-
-#contact > div > section.pre-footer div.soc div.cent h3 {
-  margin-bottom: 24px;
-  font-size: 2.2rem;
-}
-
-#contact > div > section.pre-footer div.soc div.cent ul li a {
-  margin-bottom: 24px;
-  font-size: 1.2rem;
-  text-decoration: underline;
-}
-
-#contact > div > section.pre-footer div.soc div.right h4 {
-  margin-bottom: 24px;
-  font-size: 1.5rem;
-}
-
-#contact > div > section.pre-footer div.soc div.right p.uline {
-  border-bottom: 1px solid #252422;
-  font-size: 1.2rem;
-  padding-bottom: 24px;
-  width: 100%;
 }
 
 #footer {
