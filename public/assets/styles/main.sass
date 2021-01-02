@@ -36,7 +36,6 @@ ul, ol, dd
 
 // variables, palette and typography
 $primary: hsl(40, 4%, 14%)
-// $primary10: darken($primary, 10%)
 $accent: hsl(0, 79%, 89%)
 $neutral: hsl(0, 0%, 96%)
 
@@ -68,10 +67,8 @@ p
 .emphasis
     font-size: 1.5rem
     font-family: $bold
-
-// layouts
-
-
+.bring-to-front
+    z-index: 9999
 
 // mixins
 
@@ -121,7 +118,6 @@ p
     justify-content: space-between
     align-items: center
     height: 76px
-    
     ul
         display: flex
         width: 45%
@@ -135,6 +131,91 @@ p
                 transition: color 1s ease   
                 &:hover > a 
                     color: $primary
+
+
+
+
+
+
+// modal
+
+
+.modal 
+  display: none 
+  position: fixed 
+  z-index: 1 
+  left: 0
+  top: 0
+  width: 100% 
+  height: 100% 
+
+/* Modal Content/Box */
+.modal-content 
+    background-color: $primary
+    color: $accent
+    width: 100vw
+    height: 100vh
+    padding: 30px 5% 100px
+    header
+        margin-bottom: 24px
+        h3
+            font-size: 1.5rem
+            font-family: $bold
+        i
+            font-size: 2rem
+            color: white
+        div.left
+            width: 25%
+        div.middle
+            width: 70%
+        div.right
+            width: 5%
+        .close:hover, .close:focus 
+            cursor: pointer
+
+section#modal-slider
+    overflow-x: auto
+    white-space: nowrap
+    overscroll-behavior-x: contain
+    scroll-snap-type: x mandatory
+    
+    div.modal-card
+        display: inline-block
+        scroll-snap-align: start
+        width: 450px
+        height: 70vh
+        padding: 0 20px
+        border-right: 1px solid $accent
+        margin-bottom: 50px
+        transition: transform .8s ease
+        &:hover
+            transform: translateY(-100px)
+        >*
+            padding-bottom: 24px
+        img
+            width: 100%
+            height: auto
+        h3
+            text-transform: uppercase
+            font-size: 1.5rem
+            font-family: $bold
+        p
+            font-size: 1.1rem
+        a.btn
+            @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
+            border: 1px solid $accent
+            &:hover
+                background: $accent
+                color: $primary
+                
+
+            
+
+
+
+
+
+
 
 
 // homepage 
@@ -223,8 +304,6 @@ p
         div.wrap
             padding: 20px 0 40px 0
             border-top: 1px solid $accent
-        div.wrap:last-child
-            padding-bottom: 150px
         div.left
             width: 30%
             img
@@ -238,16 +317,436 @@ p
             p > a
                 font-size: 2.5rem
                 font-family: $reg
-
         div.right
             width: 30%
             text-align: right
             background: url("/assets/img/arrow.svg") right top / 15% no-repeat scroll
    
 
+// work page
+div#work-wrapper nav ul li:nth-child(1)
+    border-bottom: 3px solid $primary
 
-                
+main#work
+    p
+        font-size: 1.2rem
+    h1
+        margin-bottom: 100px
+    h1 + div
+        justify-content: flex-end
+        margin-bottom: 100px
+        p.desc-right
+            width: 27%
+    section.showcase
+        display: flex
+        justify-content: space-between
+        border-top: 1px solid $primary
+        padding: 20px 0
+        div.card
+            height: 825px
+            width: 32.4%
+            div.media
+                margin-bottom: 24px
+                img
+                   width: 100%
+                   height: auto 
+            h3
+                font-size: 2rem
+                font-family: $bold
+                margin-bottom: 24px
+            p.card-desc
+                width: 50%
+        div.first-card
+            p.date
+                margin-bottom: 50%
+            h2
+                margin-bottom: 35px
+            p.desc
+                margin-bottom: 40px
+                width: 90%
+            a.btn
+                @include sassBtn(#ffffff, $primary, 0.9rem, 1.5, 170px)
+            border-right: 1px solid $primary
+
+
+
+// about page
+div#about-wrapper 
+    background: $primary
+    color: $accent
+    nav ul li:nth-child(2)
+        border-bottom: 3px solid $accent
+
+    main#about
+        section.first
+            border-bottom: 1px solid white
+            div
+                width: 50%
+            div.right
+                padding-top: 240px
+                h1
+                    margin-bottom: 55px
+                p
+                    font-size: 2rem
+                    margin-bottom: 65px
+        section#annoying-pics
+            height: 1400px
+            padding: 200px 0
+            div.left
+                width: 25%
+                display: flex
+                align-items: center
+
+            div.right
+                width: 75%      
+                position: relative
+                p
+                    font-size: 1.4rem
+                img
+                    width: 500px
+                .img-1
+                    position: absolute
+                    top: 0
+                    left: 0
+                    z-index: 4
+                .img1-num
+                    position: absolute
+                    top: 693px
+                    left: 0
+                .img-2
+                    position: absolute
+                    top: 300px
+                    left: 150px
+                    z-index: 5
+                .img2-num
+                    position: absolute
+                    top: 991px
+                    left: 151px
+                .img-3
+                    position: absolute
+                    top: 50px
+                    left: 300px
+                    z-index: 3
+                .img3-num
+                    position: absolute
+                    top: 65px
+                    left: 815px
+                .img-4
+                    position: absolute
+                    top: 400px
+                    left: 500px
+                    z-index: 2
+                .img4-num
+                    position: absolute
+                    top: 1088px
+                    left: 504px
+        
+        section.agency-snapshot
+            border-bottom: 1px solid white
+            h1
+                border-top: 1px solid $accent
+                border-bottom: 1px solid $accent
+                font-size: 12rem
+            div.first
+                padding: 26px 0
+                p
+                    width: 33%
+                p.txt-right
+                    text-align: right
+            div.wrap
+                div.left
+                    width: 33%
+                    margin-top: 100px
+                div.right
+                    width: 66%
+                    div.card
+                        width: 50%
+                        margin-top: 100px
+                        padding-right: 20%
+                        > *
+                            margin-bottom: 30px
+                        h3
+                            font-size: 2rem
+                        h2
+                            font-size: 4rem
+    // list section
+    section.list-section
+        padding-bottom: 100px
+        .second li
+            margin-bottom: 24px
+
+
+    // awards section
+
+    section#awards
+        > div
+            padding: 50px 0
+            height: 400px
+            margin-bottom: 70px
+            div.left
+                width: 33%
+            div.right
+                width: 66%
+                p
+                    font-size: 2.5rem
+                    padding-right: 48%
+                    margin-bottom: 50px
+                a.btn
+                    @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
+                    border: 1px solid $accent
+                    &:hover
+                        background: $accent
+                        color: $primary
             
+    section#tabs
+        padding-bottom: 300px
+        div.left
+            width: 50%
+            a
+                position: relative
+                opacity: 0.6
+                transition: opacity .3s ease
+                &:hover
+                    opacity: 1.0
+                    
+                h1
+                    font-size: 5rem
+                    display: inline-block
+                span
+                    // display: inline-block
+                    font-size: 1.5rem
+                    position: absolute
+                    top: 15px
+                    padding-left: 20px
+        div.right
+            width: 50%
+            padding: 115px 0 0 7%
+            div.tabcontent
+                width: 70%
+                height: auto
+                display: none
+                img
+                    width: 100%
+                    height: auto
+
+    #footer
+        background: white
+        color: $primary
+        h5
+            color: $primary
+        p.uline
+            border-bottom: 1px solid $primary
+        ul.ftr-social
+            display: none
+    #footer > div.copy
+        background: lightgrey 
+        small
+            color: lighten($primary, 20%)
+
+
+// newspage
+
+main#newspage
+    header
+        height: 400px
+        justify-content: space-between
+        align-items: center
+        p 
+            font-size: 4rem
+            padding-top: 12px 
+    div.wrap
+        padding: 20px 0 40px 0
+        border-top: 1px solid $primary
+    div.left
+        width: 30%
+        img
+            width: 100%
+            height: auto
+    div.center
+        width: 40%
+        flex-direction: column
+        justify-content: space-between
+        margin-left: 20px
+        p > a
+            font-size: 2.5rem
+            font-family: $reg
+            text-transform: uppercase
+        strong
+            padding-right: 30px
+    div.right
+        width: 30%
+        text-align: right
+        background: url("/assets/img/arrow-black.svg") right top / 15% no-repeat scroll
+
+
+
+// thinking
+div#thinking-wrapper
+    background: $primary
+    color: $accent
+    nav ul li:nth-child(4)
+        border-bottom: 3px solid $accent
+
+    main#thinking
+        header
+            height: 400px
+            justify-content: space-between
+            align-items: center
+            p 
+                font-size: 6rem
+                padding-top: 12px 
+        div.info
+            justify-content: space-between
+            margin-bottom: 200px
+            p
+                font-size: 1.3rem
+                line-height: 1.8
+            h2
+                margin-bottom: 30px
+            div.left
+                width: 32%
+            div.right
+                width: 65%
+                padding-right: 33%
+
+    div.wrap
+        padding: 20px 0 40px 0
+        border-top: 1px solid $accent
+        div.left
+            width: 30%
+            img
+                width: 100%
+                height: auto
+        div.center
+            width: 40%
+            flex-direction: column
+            justify-content: space-between
+            margin-left: 20px
+            p > a
+                font-size: 2.5rem
+                font-family: $reg
+                text-transform: uppercase
+            strong
+                padding-right: 30px
+        div.right
+            width: 30%
+            text-align: right
+            background: url("/assets/img/arrow.svg") right top / 12% no-repeat scroll
+
+
+
+    #footer
+        background: white
+        color: $primary
+        h5
+            color: $primary
+        p.uline
+            border-bottom: 1px solid $primary
+        ul.ftr-social
+            display: none
+    #footer > div.copy
+        background: lightgrey 
+        small
+            color: lighten($primary, 20%)
+
+
+
+
+
+// contact
+#contact
+    header
+        justify-content: space-between
+        padding: 100px 0 200px 0
+        border-bottom: 1px solid $primary
+        div.left
+            width: 49%
+            img
+                width: 100%
+                height: auto
+        div.right
+            width: 49%
+            p
+                margin-bottom: 100px
+    div.info 
+        > *
+            width: 33%
+        div.left
+            p
+                font-size: 46px !important
+        div.mid, div.right
+            > *
+                margin-bottom: 24px
+            h3
+                font-size: 1.2rem
+                font-family: $bold
+            a
+                text-decoration: underline
+                
+    div.first
+        padding: 26px 0
+    p.what-is-this
+        width: 33%
+    p.txt-right
+        text-align: right    
+
+section#offices
+    padding: 20px 0
+    margin-bottom: 100px
+    div.one-third
+        width: 33%
+        border-right: 1px solid $primary
+        max-height: 2000px
+    div.two-thirds
+        width: 66%
+        div.card
+            display: inline
+            height: 632px
+            width: 50%
+            padding: 0 20px
+            .pointless
+                justify-content: space-between
+                font-size: 1.3rem
+            div.media
+                margin-bottom: 24px
+                img
+                    width: 100%
+                    height: auto 
+            h3
+                font-size: 2rem
+                font-family: $bold
+                margin-bottom: 24px
+    p.rule
+        width: 100%
+        margin: 20px
+        border-bottom: 1px solid $primary
+        margin-bottom: 20px
+    
+
+#contact > div > section.pre-footer
+    border-top: 1px solid $primary
+    margin-bottom: 100px
+    div.soc
+        > *
+            width: 33%
+        div.cent
+            h3
+                margin-bottom: 24px
+                font-size: 2.2rem
+            ul li a
+                margin-bottom: 24px
+                font-size: 1.2rem
+                text-decoration: underline
+
+        div.right
+            h4
+                margin-bottom: 24px
+                font-size: 1.5rem
+            p.uline
+                border-bottom: 1px solid $primary
+                font-size: 1.2rem
+                padding-bottom: 24px
+                width: 100%
 
 
 
@@ -278,13 +777,14 @@ p
 #footer
     background: $primary
     color: white
+    padding-top: 100px
     h5
         color: white
     .row-one
         height: 150px
     div.left-upper
         width: 50%
-        background: url("/assets/img/footer-logo.svg") left top / 7% no-repeat scroll
+   
 
     div.right-upper
         width: 50%
@@ -307,9 +807,10 @@ p
         border-bottom: 1px solid white
         padding: 24px 0
         margin-right: 20px
+        font-size: 1.2rem
     div.copy
-        background: #000000
-        opacity: 0.2
+        background: darken($primary, 3%)
+        // opacity: 0.2
         padding: 16px 0
     div.copy-content > div
         width: 33%
@@ -321,6 +822,8 @@ p
         small
             font-size: 0.75rem
             margin-top: 30px
+            color: grey
+
 
             
             
