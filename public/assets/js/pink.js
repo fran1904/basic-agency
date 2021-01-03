@@ -1,24 +1,17 @@
  // modal
-  // Get the modal
   var modal = document.getElementById("myModal");
-
-  // Get the button that opens the modal
   var btn = document.querySelector(".myBtn");
-  
-  // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close")[0];
   
-  // When the user clicks on the button, open the modal
+
   btn.onclick = function() {
     modal.style.display = "block";
   }
-  
-  // When the user clicks on <span> (x), close the modal
+
   span.onclick = function() {
     modal.style.display = "none";
   }
   
-  // When the user clicks anywhere outside of the modal, close it
   window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
@@ -27,7 +20,6 @@
 
 
 // light-dark theme js
-
 window.onload = function adjustBrandColor(){
     if (window.location.pathname == "/about" || window.location.pathname == "/thinking") {
         document.querySelector('.logo-normal').style.display = "none"
@@ -62,6 +54,7 @@ imgFour.addEventListener('mouseout', background)
 function foreground(event){
     event.target.style.zIndex = "9999"
 }
+
 function background(event){
     event.target.style.zIndex = "1"
 }
