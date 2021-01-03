@@ -3,29 +3,24 @@ const router = express.Router()
 
 // Routes and request handling go here
 router.get('/', (req, res) => {
-    res.render('index') 
+    res.render('index', {title: "Home"}) 
 })
 
 router.get('/work', (req, res) => {
-    res.render('work') 
+    res.render('work', {title: "Work"}) 
 })
 router.get('/news', (req, res) => {
-    res.render('news') 
+    res.render('news', {title: "News"}) 
 })
 router.get('/thinking', (req, res) => {
-    res.render('thinking') 
+    res.render('thinking', {title: "Thinking"}) 
 })
 router.get('/contact', (req, res) => {
-    res.render('contact') 
+    res.render('contact', {title: "Contact"}) 
 })
 
-router.get('/about', (req, res) => {    // When user requests website.com/about...
-    res.render('about')                 // ... send back about.ejs as a response
+router.get('/about', (req, res) => {    
+    res.render('about', {title: "About"})                
 })
-
-// 301 redirect example
-// router.get('/about', (req, res) => {    // Redirect '/about'
-//     res.redirect('my-new-about-page')  // to '/my-new-about-page'
-// })
 
 module.exports = router

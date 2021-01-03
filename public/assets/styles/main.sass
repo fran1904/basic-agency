@@ -126,7 +126,7 @@ p
     background-color: $primary
     color: $accent
     width: 100vw
-    height: 100vh
+    // height: 100vh
     padding: 30px 5% 100px
     header
         margin-bottom: 24px
@@ -155,7 +155,7 @@ section#modal-slider
         display: inline-block
         scroll-snap-align: start
         width: 450px
-        height: 70vh
+        // height: 70vh
         padding: 0 20px
         border-right: 1px solid $accent
         margin-bottom: 50px
@@ -175,7 +175,7 @@ section#modal-slider
             font-size: 1.1rem
         a.btn
             @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
-                border: 1px solid $accent
+            border: 1px solid $accent
             &:hover
                 background: $accent
                 color: $primary
@@ -203,7 +203,7 @@ section#modal-slider
             background: url("/assets/img/branding-img.svg") right top / 20% no-repeat scroll
         a.btn
             @include sassBtn(#ffffff, $primary, 0.9rem, 1.5, 170px)
-                margin-bottom: 150px
+            margin-bottom: 150px
 
     section#featured
         padding: 150px 0 0 0
@@ -252,7 +252,7 @@ section#modal-slider
                 margin-bottom: 80px
             a.btn
                 @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
-                    border: 1px solid $accent
+                border: 1px solid $accent
                 &:hover
                     background: $accent
                     color: #000000
@@ -289,6 +289,7 @@ div#work-wrapper nav ul li:nth-child(1)
     border-bottom: 3px solid $primary
 
 main#work
+    margin-bottom: 100px
     p
         font-size: 1.2rem
     h1
@@ -327,7 +328,7 @@ main#work
                 width: 90%
             a.btn
                 @include sassBtn(#ffffff, $primary, 0.9rem, 1.5, 170px)
-                    border-right: 1px solid $primary
+                border-right: 1px solid $primary
 
 // about page
 div#about-wrapper
@@ -337,6 +338,7 @@ div#about-wrapper
         border-bottom: 3px solid $accent
 
     main#about
+        margin-bottom: 100px
         section.first
             border-bottom: 1px solid white
             div
@@ -451,10 +453,11 @@ div#about-wrapper
                     margin-bottom: 50px
                 a.btn
                     @include sassBtn($primary, $accent, 0.9rem, 1.5, 170px)
-                        border: 1px solid $accent
+                    border: 1px solid $accent
                     &:hover
                         background: $accent
                         color: $primary
+
 
     section#tabs
         padding-bottom: 300px

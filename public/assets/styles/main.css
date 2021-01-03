@@ -141,7 +141,6 @@ p {
   background-color: #252422;
   color: #f9cdcd;
   width: 100vw;
-  height: 100vh;
   padding: 30px 5% 100px;
 }
 
@@ -187,7 +186,6 @@ section#modal-slider div.modal-card {
   display: inline-block;
   scroll-snap-align: start;
   width: 450px;
-  height: 70vh;
   padding: 0 20px;
   border-right: 1px solid #f9cdcd;
   margin-bottom: 50px;
@@ -468,6 +466,10 @@ div#work-wrapper nav ul li:nth-child(1) {
   border-bottom: 3px solid #252422;
 }
 
+main#work {
+  margin-bottom: 100px;
+}
+
 main#work p {
   font-size: 1.2rem;
 }
@@ -522,10 +524,6 @@ main#work section.showcase div.card p.card-desc {
   width: 50%;
 }
 
-main#work section.showcase div.first-card {
-  border-right: 1px solid #252422;
-}
-
 main#work section.showcase div.first-card p.date {
   margin-bottom: 50%;
 }
@@ -560,6 +558,7 @@ main#work section.showcase div.first-card a.btn {
   white-space: nowrap;
   -webkit-transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
   transition: color 0.5s ease, background-color 0.5s ease, border-color 0.5s ease;
+  border-right: 1px solid #252422;
 }
 
 main#work section.showcase div.first-card a.btn:hover {
@@ -574,6 +573,10 @@ div#about-wrapper {
 
 div#about-wrapper nav ul li:nth-child(2) {
   border-bottom: 3px solid #f9cdcd;
+}
+
+div#about-wrapper main#about {
+  margin-bottom: 100px;
 }
 
 div#about-wrapper main#about section.first {
